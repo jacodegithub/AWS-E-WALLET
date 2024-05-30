@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.6.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.addFunds</groupId>
+	<artifactId>wallet-addFunds</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>wallet-addFunds</name>
+	<description>Demo project for wallet addFunds</description>
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-test</artifactId>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
+				
+<!--		 https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk -->
+<!--		<dependency>-->
+<!--		    <groupId>com.amazonaws</groupId>-->
+<!--		    <artifactId>aws-java-sdk</artifactId>-->
+<!--		    <version>1.12.712</version>-->
+<!--		</dependency>-->
+
+<!--		 https://mvnrepository.com/artifact/com.amazonaws/aws-lambda-java-core -->
+<!--		<dependency>-->
+<!--		    <groupId>com.amazonaws</groupId>-->
+<!--		    <artifactId>aws-lambda-java-core</artifactId>-->
+<!--		    <version>1.2.2</version>-->
+<!--		</dependency>-->
+
+<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-qldb -->
+<!--        <dependency>-->
+<!--            <groupId>com.amazonaws</groupId>-->
+<!--            <artifactId>aws-java-sdk-qldb</artifactId>-->
+<!--            <version>1.12.7</version>-->
+<!--        </dependency>-->
+
+		<!-- KINESIS DATA STREAM AWS-->
+		<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-kinesis -->
+		<dependency>
+		    <groupId>com.amazonaws</groupId>
+		    <artifactId>aws-java-sdk-kinesis</artifactId>
+		    <version>1.12.716</version>
+		</dependency>
+
+
+	    <dependency>
+	      <groupId>org.springframework.boot</groupId>
+	      <artifactId>spring-boot-starter-web</artifactId>
+	    </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/software.amazon.ion/ion-java -->
+        <dependency>
+            <groupId>software.amazon.ion</groupId>
+            <artifactId>ion-java</artifactId>
+            <version>1.5.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>software.amazon.qldb</groupId>
+            <artifactId>amazon-qldb-driver-java</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
+
+
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-shade-plugin</artifactId>
+		        <version>3.2.4</version>
+		        <configuration>
+		          <createDependencyReducedPom>false</createDependencyReducedPom>
+		        </configuration>
+		        <executions>
+		          <execution>
+		            <phase>package</phase>
+		            <goals>
+		              <goal>shade</goal>
+		            </goals>
+		          </execution>
+		        </executions>
+		      </plugin>
+		</plugins>
+		<defaultGoal>package</defaultGoal>
+	</build>
+
+</project>
